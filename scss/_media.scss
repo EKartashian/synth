@@ -1,0 +1,457 @@
+@media (max-width: 1438px) {
+    .sidebar {
+        left: 400px;
+    }
+    .mainbar {
+        position: relative;
+        left: 150px;
+        padding-top: 50px;
+        &__posts {
+            padding: 0 0 24px 0;
+        }
+        &__switcher {
+            position: relative;
+            left: 270px;
+        }
+    }
+
+}
+
+@media (max-width: 1369px) {
+        .header {
+            padding: 20px 80px 20px 80px;
+        }
+        .container {
+            padding: 62px 110px 20px 110px;
+        }
+        .mainbar__posts {
+            &-wrapper {
+                width: 335px;
+                height: 250px;
+            }
+            &-wrapper svg {
+                width: 13px;
+                height: 13px;
+                left: 30px;
+                top: 27px;
+            }
+            &-text {
+                font-size: 32px;
+                padding: 40px 24px 0 40px
+            }
+            &-author {
+                font-size: 12px;
+            }
+            &-author::before {
+                width: 22px;
+                height: 22px;
+            }
+            &-share {
+                padding: 40px 30px 0 0;
+                font-size: 15px;
+            }
+            &-view {
+                font-size: 12px;
+            }
+            &-like {
+                font-size: 12px;
+                padding: 42px 24px 0 0;
+            }
+            &-shared {
+                font-size: 12px;
+            }
+            &-shared__2 {
+                font-size: 12px;
+            }
+        }
+}
+
+@media (max-width: 1269px) {
+
+    .header {
+        padding: 20px 80px 20px 80px;
+    }
+    .container {
+        padding: 62px 60px 20px 60px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .mainbar__posts {
+        width: 790px;
+    }
+    .header {
+        padding: 20px 60px 20px 60px;
+    }
+    .container {
+        padding: 62px 30px 20px 30px;
+    }
+}
+
+@media (max-width: 1109px) {
+    .mainbar__posts {
+        width: 770px;
+    }
+    .header {
+        padding: 20px 30px 20px 30px;
+    }
+    .container {
+        padding: 62px 30px 20px 30px;
+    }
+}
+
+// iPad Pro
+@media (max-width: 1024px) {
+    .mainbar {
+        left: 105px;
+        &__switcher {
+            left: 245px;
+        }
+    }
+    .sidebar {
+        left: 350px;
+    }
+}
+
+@media (max-width: 999px) {
+    .sidebar {
+        left: 300px;
+    }
+    .mainbar {
+        &__switcher {
+            position: relative;
+            left: 180px;
+        }
+        &__posts {
+            width: 650px;
+            &-wrapper {
+                width: 260px;
+                height: 210px;
+            }
+            &-wrapper svg {
+                width: 12px;
+                height: 12px;
+                left: 31px;
+                top: 28px;
+            }
+            &-text {
+                font-size: 15px;
+                padding: 40px 24px 0 40px
+            }
+            &-author {
+                font-size: 12px;
+                padding: 40px 0 0 46px;
+            }
+            &-author::before {
+                width: 18px;
+                height: 18px;
+            }
+            &-share {
+                padding: 37px 33px 0 0;
+                font-size: 12px;
+            }
+            &-view {
+                font-size: 11px;
+                right: 42px;
+            }
+            &-view::before {
+                right: 3px;
+            }
+            &-like {
+                font-size: 11px;
+                padding: 42px 24px 0 0;
+            }
+            &-like::before {
+                right: 3px;
+            }
+            &-shared {
+                font-size: 10px;
+            }
+            &-shared__2 {
+                font-size: 10px;
+            }
+        }
+    }
+    
+    .header {
+        padding: 20px 30px 20px 30px;
+    }
+    .container {
+        padding: 62px 0px 20px 0px;
+    }
+}
+
+@media (max-width: 899px) {
+    .container {
+        padding-top: 55px;
+    }
+    .synths {
+        top: 130px;
+    }
+    .mainbar {
+        padding-top: 15px;
+        &__switcher {
+            position: relative;
+            left: 150px;
+            padding-bottom: 30px;
+        }
+        &__posts {
+            width: 600px;
+        }
+    }
+}
+
+// iPad
+@media (max-width: 768px) {
+    .header {
+        &__menu {
+            width: 220px;
+            padding-top: 23px;
+            font-size: 13px;
+        }
+        &__user {
+        width: 240px;
+        &-name {
+            font-size: 14px;
+        }
+        }
+        &__buttons {
+            width: 80px;
+        }  
+    }
+    .header__action-button::before {
+        top: 87px;
+        right: 156px;
+        width: 50px;
+        height: 50px;
+    }
+    .header__action-lines::before {
+        height: 14px;
+        top: 105px;
+    }
+    .header__action-lines::after {
+        height: 14px;
+        top: 105px;
+    }
+    .sidebar {
+        left: 205px;
+    }
+    .mainbar {
+        left: 110px;
+        &__posts {
+            width: 540px;
+        }
+        &__switcher {
+            width: 200px;
+            padding-left: 0;
+            left: 170px;
+        }
+    }
+}
+
+@media (max-width: 649px) {
+    .sidebar {
+        left: 100px;
+    }
+    .mainbar {
+        left: 0px;
+        &__posts {
+            width: 540px;
+        }
+        &__switcher {
+            width: 200px;
+            padding-left: 0;
+            left: 170px;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .header {
+        padding: 20px 20px 20px 20px;
+        height: 77px;
+        &__buttons {
+            display: none;
+        }
+        &__user {
+            width: 140px;
+            height: 20px;
+        }
+        &__menu {
+            width: 180px;
+            font-size: 12px;
+            padding-top: 1px;
+            &-tab a::after {
+                bottom: -10px;
+            }
+        }
+        &__action-button::before {
+            width: 40px;
+            height: 40px;
+            top: 56px;
+            right: 105px;
+        }
+        &__action-lines::before {
+            height: 13px;
+            top: 70px;
+            right: 124px;
+        }
+        &__action-lines::after {
+            height: 13px;
+            top: 70px;
+            right: 124px;
+        }
+    }
+    .mainbar {
+        left: 90px;
+        &__posts {
+            width: 360px;
+            &-wrapper {
+                width: 170px;
+                height: 160px;
+            }
+            &-wrapper svg {
+                width: 11px;
+                height: 11px;
+                left: 20px;
+                top: 13px;
+            }
+            &-text {
+                font-size: 12px;
+                padding: 25px 0 0 20px;
+            }
+            &-author {
+                font-size: 10px;
+                padding: 19px 0 0 23px;
+            }
+            &-author::before {
+                width: 16px;
+                height: 16px;
+                top: 19px;
+                left: 5px;
+            }
+            &-share {
+                padding: 16px 13px 0 0;
+                font-size: 10px;
+            }
+            &-view {
+                font-size: 10px;
+                right: 8px;
+                padding: 18px 27px 0 0;
+            }
+            &-view::before {
+                right: 3px;
+                height: 5px;
+                width: 5px;
+            }
+            &-like {
+                font-size: 10px;
+                padding: 20px 2px 0 0;
+            }
+            &-like::before {
+                right: 3px;
+            }
+            &-shared {
+                left: 8px;
+                top: 8px;
+                font-size: 8px;
+            }
+            &-shared__2 {
+                font-size: 8px;
+                top: 8px;
+                left: 35px;
+            }
+        }
+        &__switcher {
+            left: 85px;
+        }
+    }
+    .sidebar {
+        left: 90px;
+        &__dropdown {
+            top: 30px;
+            left: 170px;
+            font-size: 12px;
+            line-height: 24px;
+            width: 150px;
+            height: 100px;
+        }
+    }
+    .synths {
+        left: 20px;
+        &__item {
+            padding: 16px;
+        }
+    }
+}
+
+// iPhone 6/7/8 Plus
+@media (max-width: 414px) {
+    .sidebar {
+        left: 25px;
+    }
+    .mainbar {
+        left: 25px;
+        &__switcher {
+            left: 85px;
+        }
+    }
+}
+
+// iPhone X/6/7/8
+@media (max-width: 399px) {
+    .container {
+        padding-top: 35px;
+    }
+    .header {
+        &__user-name {
+            font-size: 12px;
+        }
+        &__menu {
+            width: 165px;
+            font-size: 11px;
+        }
+    }
+    .sidebar {
+        width: 330px;
+        height: 345px;
+        left: 10px;
+        &__user-name {
+            font-size: 22px;
+            line-height: 25px;
+        }
+        &__user-link {
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+    .synths {
+        &-text {
+            font-size: 15px;
+            line-height: 22px;
+        }
+        &__item-title {
+            font-size: 15px;
+            line-height: 20px;
+        }
+        &__item-num {
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+    .mainbar {
+        left: 10px;
+        padding-top: 10px;
+        &__switcher {
+            left: 86px;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .mainbar {
+        left: 0;
+    }
+}
+

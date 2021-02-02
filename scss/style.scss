@@ -1,0 +1,483 @@
+@import "vars";
+@import "global";
+
+
+.header {
+  display: flex;
+  position: sticky;
+  flex-wrap: wrap;
+  height: 112px;
+  padding: 20px 135px 20px 135px;
+  box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
+  &__container {
+    flex: 1;
+  }
+}
+
+.header__menu {
+  display: flex;
+  padding-top: 24px;
+  text-transform: uppercase;
+  justify-content: space-between;
+  width: 260px;
+  font-size: 14px;
+  line-height: 19px;
+  &-tab {
+    position: relative;
+    a {
+      color: #3E4056;
+    }
+    a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -23px;   
+    }
+    .active, a:hover::after {
+      height: 4px;
+      opacity: 1;
+      transition: all .3s;
+      background: linear-gradient(135deg, #FF974F 0%, #E32C75 100%);
+    }
+  }  
+}
+
+.header__user {
+  display: flex;
+  width: 285px;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+  &-name {
+    @extend %os-regular;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    color: #3E3F58;
+  }
+  &-avatar {
+    position: relative;
+    top: -6px;
+  }
+  &-arrow:hover {
+    opacity: 0.6;
+    transition: all .3s;
+  }
+}
+
+.header__buttons {
+  display: flex;
+  width: 96px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 8px;
+  &-notifications:hover {
+    opacity: 0.6;
+    transition: all .3s;
+  }
+  &-share:hover {
+    opacity: 0.6;
+    transition: all .3s;
+  }
+  &-medium:hover {
+    opacity: 0.6;
+    transition: all .3s;
+  }
+}
+
+.header__action-button::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 78px;
+  right: 150px;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #FF974F 0%, #E32C75 100%);
+  cursor: pointer;
+}
+
+.header__action-lines::before {
+  content: "";
+  width: 1.82px;
+  height: 20px;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 100px;
+  right: 180px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.header__action-lines::after {
+  content: "";
+  width: 1.82px;
+  height: 20px;
+  position: absolute;
+  top: 100px;
+  right: 180px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.header__action-button:hover {
+  opacity: 0.8;
+  transition: all .3s;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #F2F2F2;
+  padding: 62px 135px 20px 135px;
+}
+
+// ВЫПАДАЮЩЕЕ ОКНО НАЧАЛО
+.dropbtn:before {
+  content: url('../images/dots.svg');
+  background-color: #F2F2F2;
+  display: block;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.dropbtn {
+  position: absolute;
+  right: 5px;
+  border: none;
+  outline: none;
+}
+
+.show {
+  display: block;
+}
+
+.sidebar__dropdown {
+  width: 176px;
+  height: 124px;
+  background: #fff;
+  mix-blend-mode: normal;
+  border-radius: 8px;
+  opacity: 0.94;
+  position: absolute;
+  left: 310px;
+  top: 40px;
+  z-index: 10;
+  @extend %os-semibold;
+  font-size: 16px;
+  line-height: 32px;
+  color: #3E4056;
+  z-index: 10;
+  text-align: left;
+  vertical-align: center;
+  display: none;
+  backdrop-filter: blur(21.7463px);
+  &-report {
+    position: relative;
+    top: 24px;
+    padding-left: 60px;
+    cursor: pointer;
+  }
+  &-report:hover {
+    background-color: #ECF1F8;
+    transition: all .3s;
+  }
+  &-block {
+    position: relative;
+    top: 40px;
+    padding-left: 60px;
+    cursor: pointer;
+  }
+  &-block:hover{
+    background-color: #ECF1F8;
+    transition: all .3s;
+  }
+  &-report::before {
+    content: url('../images/report.svg');
+    position: absolute;
+    top: 4px;
+    left: 24px;
+    
+  }
+  &-block::before {
+    content: url('../images/block.svg');
+    position: absolute;
+    top: 2px;
+    left: 26px;
+  }
+}
+// ВЫПАДАЮЩЕЕ ОКНО КОНЕЦ
+
+// ЛЕВЫЙ БЛОК SIDEBAR НАЧАЛО
+.sidebar {
+  position: relative;
+  display: flex;
+  width: 350px;
+  height: 355px;
+  color: #3E3F58;
+  &__user {
+    &-pic {
+      position: absolute;
+    }
+    &-name {
+      position: absolute;
+      left: 140px;
+      @extend %ms-semibold;
+      font-size: 24px;
+      line-height: 26px;
+    }
+    &-link {
+      position: absolute;
+      left: 140px;
+      top: 60px;
+      @extend %os-regular;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &-edit a {
+      position: absolute;
+      left: 150px;
+      top: 90px;
+      @extend %os-regular;
+      font-size: 16px;
+      line-height: 20px;
+      text-decoration-line: underline;
+      color: #F05D63;
+    }
+    &-edit svg {
+      position: relative;
+      top: 5px;
+      right: 8px;
+    }
+    &-edit:hover {
+      opacity: 0.6;
+      transition: all .3s;
+    }
+  }
+}
+
+.synths {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 150px;
+  &__item {
+    padding: 20px;
+    display: inline-block;
+    align-items: center;
+    &-num {
+      @extend %os-bold;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      color: #3E3F58;
+    }
+    &-title {
+      @extend %os-regular;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #636363;
+    }
+  }
+  &__text {
+    @extend %os-regular;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3E3F58;
+  }
+}
+// ЛЕВЫЙ БЛОК SIDEBAR КОНЕЦ
+
+// ПЕРЕКЛЮЧАТЕЛЬ PUBLIC/PRIVATE НАЧАЛО
+.switcher {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  left: 0px;
+}
+
+.switcher input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #B2B3BB;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+input:checked + .slider {
+  background-color: #ED5267;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+// ПЕРЕКЛЮЧАТЕЛЬ PUBLIC/PRIVATE КОНЕЦ
+
+// БЛОКИ ПОСТОВ НАЧАЛО
+.mainbar {
+  @extend %os-semibold;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3E4056;
+  &__switcher {
+    display: flex;
+    width: 249px;
+    justify-content: space-between;
+    padding-bottom: 62px;
+    padding-left: 47px;
+  }
+}
+
+.mainbar__posts {
+  display: flex;
+  width: 819px;
+  justify-content: space-between;
+  padding:0 0 24px 47px;
+  &-wrapper {
+    width: 374px;
+    height: 280px;
+    background-color: #fff;
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
+    justify-content: space-between;
+    position: relative;
+  }
+  &-wrapper svg {
+    position: absolute;
+    left: 24px;
+    top: 27px;
+  }
+  &-text {
+    @extend %ms-regular;
+    font-size: 36px;
+    line-height: 44px;
+    color: #3E4056;
+    text-align: left;
+    padding: 56px 24px 0 24px;
+  }
+  &-author {
+    @extend %os-semibold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #3E4056;
+    padding: 42px 0 0 56px;
+    position: absolute;
+  }
+  &-author::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 40px;
+    left: 24px;
+    width: 24px;
+    height: 24px;
+    background-color: #B2B3BB;
+    border-radius: 50%;
+  }
+  &-share {
+    @extend %os-regular;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: right;
+    position: absolute;
+    padding: 40px 24px 0 0;
+    right: 0;
+    color: #F05D63;
+  }
+  &-view {
+    @extend %os-semibold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #3E4056;
+    text-align: right;
+    position: absolute;
+    padding: 40px 24px 0 0;
+    right: 60px;
+  }
+  &-view::before {
+    content: url('../images/view.svg');
+    position: relative;
+    top: 0.2em;
+    right: 8px;
+  }
+  &-like {
+    @extend %os-semibold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #3E4056;
+    text-align: right;
+    position: absolute;
+    padding: 40px 24px 0 0;
+    right: 0;
+  }
+  &-like::before {
+    content: url('../images/like.svg');
+    position: relative;
+    top: 0.2em;
+    right: 8px;
+  }
+  &-share:hover {
+    opacity: 0.6;
+    transition: all .3s;
+  }
+  &-shared {
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    @extend %os-semibold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #3E4056;
+  }
+  &-shared span {
+    background-color: #ECF1F8;
+    border-radius: 6px;
+  }
+  &-shared__2 {
+    position: absolute;
+    left: 46px;
+    top: 24px;
+    @extend %os-semibold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #3E4056;
+  }
+}
+// БЛОКИ ПОСТОВ КОНЕЦ
+
+@import "media";
